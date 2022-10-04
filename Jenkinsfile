@@ -1,9 +1,7 @@
 pipeline {
     
     agent any 
-        options {
-            buildDiscarder(logRotator(numTokeepStr: '5'))
-        }
+        
         environment{
             DOCKERHUB_CRENDENTIALS = crendentials ('dockerhub')
         }
